@@ -1,0 +1,31 @@
+import xlrd
+from django.core.management.base import BaseCommand
+from statistic.models import Player
+
+class Command(BaseCommand):
+    def add_arguments(self, parser):
+        pass
+
+    def calculate_fg(self, fgm, fga):
+        if int(fga) == 0:
+            return 0
+        else:
+            return (int(fgm)/int(fga)) * 100
+
+    def handle(self, *args, **options):
+        workbook = xlrd.open_workbook('first_game_stats.xlsx', on_demand=True).sheet_by_index(0)
+        first_row = []
+        for col in range(workbook.ncols):
+            first_row.append(workbook.cell_value(0, col))
+        data = []
+        for row in range(1, workbook.nrows):
+            elm = {}
+            for col in range(workbook.ncols):
+                elm[first_row[col]] = workbook.cell_value(row, col)
+            data.append(elm)
+
+        for player in data:
+
+            some_player = Player(name=player['Player'],
+                                 )
+            some_player.save()

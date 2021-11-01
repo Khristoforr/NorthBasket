@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Северная баскетбольная ассоциация</title>
+</head>
+<body>
+<ul>
+{% for o in players %}
+    {% for i in o.stats1.all %}
+    <li>{{o.name}} {{i.pts}}</li>
+    {% endfor %}
+{% endfor %}
+</ul>
+
+
+<h1>скоро будет запущен в работу :)</h1>
+<a href="http://yandex.ru"> <h1>Сайт о первом веб-сайте</h1></a>
+</body>
+</html>
