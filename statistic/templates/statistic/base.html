@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<link type="text/css" href="{% static 'basket/css/styles.css' %}" rel="stylesheet" />
+    <title>Северная баскетбольная ассоциация</title>
+</head>
+<body>
+<div class="navbar">
+ <a href="/home">Расписание</a>
+  <a href="/top-5">Статистика</a>
+  <a href="/top-5">Результаты</a>
+  <a href="/top-5">ТОП-5</a>
+</div>
+
+
+
+<div class="main">
+    {% block content %}
+
+    {% endblock %}
+
+</div>
+
+</body>
+</html>
