@@ -24,7 +24,7 @@ from statistic.views import pageNotFound
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('statistic.urls')),
-    path('', RedirectView.as_view(url='/home/', permanent=True)),
+    path('', RedirectView.as_view(url='/home/', permanent=True))
 ]
 
 

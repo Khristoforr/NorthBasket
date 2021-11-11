@@ -1,0 +1,66 @@
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: #7FFFD4;
+    color: black;
+    text-decoration: underline;
+}
+
+/* Main content */
+.main {
+    margin-top: 80px; /* Add a top margin to avoid content overlay */
+}
+
+table {
+border-spacing: 10px 0px;
+font-family: 'Open Sans', sans-serif;
+font-weight: bold;
+}
+th {
+padding: 10px 30px;
+background: #56433D;
+color: #F9C941;
+border-right: 2px solid;
+font-size: 0.9em;
+}
+th:first-child {
+text-align: center;
+}
+th:last-child {
+border-right: 2px solid;
+}
+td {
+vertical-align: middle;
+padding: 30px;
+font-size: 14px;
+text-align: center;
+border-top: 2px solid #56433D;
+border-bottom: 2px solid #56433D;
+border-right: 2px solid #56433D;
+border-left: 2px  solid #56433D;
+}
+td:first-child {
+border-left: 2px solid #56433D;
+border-right: 2px solid;
+}
+td:nth-child(2){
+text-align: center;
+}

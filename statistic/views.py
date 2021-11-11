@@ -7,11 +7,13 @@ from django.views.generic import ListView
 
 from statistic.models import Player, Game1, AverageStat
 
+def show_main_page(request):
+    return render(request, 'statistic/home.html')
 
 def show_smth(request):
-    player = Player.objects.all()
+    player = Player.objects.order_by('-stats1__pts')[:5]
     context = {'players': player}
-    return render(request, 'statistic/home.html', context=context)
+    return render(request, 'statistic/player.html', context=context)
     # return HttpResponse("Страница")
 
 def show_player(request, player_name):

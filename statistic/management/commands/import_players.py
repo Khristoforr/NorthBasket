@@ -25,7 +25,5 @@ class Command(BaseCommand):
             data.append(elm)
 
         for player in data:
+            Player.objects.create(name=player['Player'])
 
-            some_player = Player(name=player['Player'],
-                                 )
-            some_player.save()

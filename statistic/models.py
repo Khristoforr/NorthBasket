@@ -7,9 +7,13 @@ class Player(models.Model):
     team = models.ForeignKey('Team', on_delete=models.CASCADE, null=True, blank=True, related_name='get_players')
     achievements = models.ManyToManyField('Achievements', through='Awards', null=True, blank=True)
     photo = models.ImageField(upload_to=f'photos/%Y/%m/%d/', verbose_name="фото", null=True, blank=True)
-    rus_first_name = models.TextField()
-    rus_last_name = models.TextField()
+    rus_first_name = models.TextField(null=True, blank=True)
+    rus_last_name = models.TextField(null=True, blank=True)
     injured = models.BooleanField(default=False)
+    weight =  models.IntegerField(null=True, blank=True)
+    height = models.IntegerField(null=True, blank=True)
+    age = models.IntegerField(null=True, blank=True)
+    position = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.name
