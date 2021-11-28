@@ -1,6 +1,6 @@
 import xlrd
 from django.core.management.base import BaseCommand
-from statistic.models import Player, Game1, Game2, Game3
+from statistic.models import Player, AverageStat, Game1, Game2, Game3, Game4
 
 
 class Command(BaseCommand):
@@ -14,10 +14,9 @@ class Command(BaseCommand):
             return (int(fgm)/int(fga)) * 100
 
     def handle(self, *args, **options):
-        game_book = {1: 'first_game_stats.xlsx', 2: 'second_game_stats.xlsx', 3: 'third_game_stats.xlsx'}
-        models_book = {1: Game1, 2: Game2, 3: Game3}
-        admin_choise = int(input('Введите номер игры для импорта в БД'))
-        workbook = xlrd.open_workbook(game_book[admin_choise], on_demand=True).sheet_by_index(0)
+        AverageStat.objects.all().delete()
+        game_list = [Game1, Game2, Game3, Game4]
+        workbook = xlrd.open_workbook('import_stats.xlsx', on_demand=True).sheet_by_index(0)
         first_row = []
         for col in range(workbook.ncols):
             first_row.append(workbook.cell_value(0, col))
@@ -29,8 +28,10 @@ class Command(BaseCommand):
             data.append(elm)
 
         for player in data:
-            some_player = models_book[admin_choise](name_id=Player.objects.filter(name=player['Player'])[0].name,
-                                 min=player['MIN'],
+            print(player['Player'])
+            game_index = Player.objects.filter(name=player['Player']).first().games_played
+            some_player = game_list[game_index](name_id=Player.objects.filter(name=player['Player'])[0].name,
+                                 min=int((player['MIN'])[:1]),
                                  pts=player['PTS'],
                                  fgm2=player['2PM'],
                                  fga2=player['2PA'],
@@ -52,7 +53,38 @@ class Command(BaseCommand):
                                  stl=player['STL'],
                                  blk=player['BLK'],
                                  eff=player['EFF'],
-                                 plus_minus=player['+/-']
+                                 plus_minus=player['+/-'],
+                                     )
+            Player.objects.filter(name=player['Player']).update(games_played=game_index + 1)
+            some_player.save()
+
+        for player in data:
+            games_played = Player.objects.filter(name=player['Player'])[0].games_played
+            some_player = AverageStat(name_id=Player.objects.filter(name=player['Player'])[0].name,
+                                 min=sum([i.objects.filter(name=player['Player'])[0].min for i in game_list[0:games_played]])/games_played,
+                                 pts=sum([i.objects.filter(name=player['Player'])[0].pts for i in game_list[0:games_played]])/games_played,
+                                 fgm2=sum([i.objects.filter(name=player['Player'])[0].fgm2 for i in game_list[0:games_played]])/games_played,
+                                 fga2=sum([i.objects.filter(name=player['Player'])[0].fga2 for i in game_list[0:games_played]])/games_played,
+                                 fg2=sum([i.objects.filter(name=player['Player'])[0].fg2 for i in game_list[0:games_played]])/games_played,
+                                 fgm3=sum([i.objects.filter(name=player['Player'])[0].fgm3 for i in game_list[0:games_played]])/games_played,
+                                 fga3=sum([i.objects.filter(name=player['Player'])[0].fga3 for i in game_list[0:games_played]])/games_played,
+                                 fg3=sum([i.objects.filter(name=player['Player'])[0].fg3 for i in game_list[0:games_played]])/games_played,
+                                 fgm=sum([i.objects.filter(name=player['Player'])[0].fgm for i in game_list[0:games_played]])/games_played,
+                                 fga=sum([i.objects.filter(name=player['Player'])[0].fga for i in game_list[0:games_played]])/games_played,
+                                 fg=sum([i.objects.filter(name=player['Player'])[0].fg for i in game_list[0:games_played]])/games_played,
+                                 ftm=sum([i.objects.filter(name=player['Player'])[0].ftm for i in game_list[0:games_played]])/games_played,
+                                 fta=sum([i.objects.filter(name=player['Player'])[0].fta for i in game_list[0:games_played]])/games_played,
+                                 ft=sum([i.objects.filter(name=player['Player'])[0].ft for i in game_list[0:games_played]])/games_played,
+                                 oreb=sum([i.objects.filter(name=player['Player'])[0].oreb for i in game_list[0:games_played]])/games_played,
+                                 dreb=sum([i.objects.filter(name=player['Player'])[0].dreb for i in game_list[0:games_played]])/games_played,
+                                 reb=sum([i.objects.filter(name=player['Player'])[0].reb for i in game_list[0:games_played]])/games_played,
+                                 ast=sum([i.objects.filter(name=player['Player'])[0].ast for i in game_list[0:games_played]])/games_played,
+                                 tov=sum([i.objects.filter(name=player['Player'])[0].tov for i in game_list[0:games_played]])/games_played,
+                                 stl=sum([i.objects.filter(name=player['Player'])[0].stl for i in game_list[0:games_played]])/games_played,
+                                 blk=sum([i.objects.filter(name=player['Player'])[0].blk for i in game_list[0:games_played]])/games_played,
+                                 eff=sum([i.objects.filter(name=player['Player'])[0].eff for i in game_list[0:games_played]])/games_played,
+                                 plus_minus=sum([i.objects.filter(name=player['Player'])[0].plus_minus for i in game_list[0:games_played]])/games_played,
                                      )
             some_player.save()
+
         print("Экспорт данных выполнен успешно")

@@ -13,7 +13,7 @@ class Command(BaseCommand):
             return (int(fgm)/int(fga)) * 100
 
     def handle(self, *args, **options):
-        workbook = xlrd.open_workbook('first_game_stats.xlsx', on_demand=True).sheet_by_index(0)
+        workbook = xlrd.open_workbook('Players_info.xlsx', on_demand=True).sheet_by_index(0)
         first_row = []
         for col in range(workbook.ncols):
             first_row.append(workbook.cell_value(0, col))
@@ -25,5 +25,11 @@ class Command(BaseCommand):
             data.append(elm)
 
         for player in data:
-            Player.objects.create(name=player['Player'])
+            Player.objects.create(name=player['name'],
+                                  rus_first_name=player['rus_first_name'],
+                                  rus_last_name=player['rus_last_name'],
+                                  weight=player['weight'],
+                                  age=player['age'],
+                                  position=player['position'],
+                                  )
 

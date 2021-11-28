@@ -14,6 +14,7 @@ class Player(models.Model):
     height = models.IntegerField(null=True, blank=True)
     age = models.IntegerField(null=True, blank=True)
     position = models.TextField(null=True, blank=True)
+    games_played = models.IntegerField(null=True, default=0)
 
     def __str__(self):
         return self.name
@@ -73,6 +74,11 @@ class Game2(Stat):
 
 class Game3(Stat):
     name = models.ForeignKey('Player', on_delete=models.CASCADE, related_name='stats3')
+
+
+class Game4(Stat):
+    name = models.ForeignKey('Player', on_delete=models.CASCADE, related_name='stats4')
+
 
 class AverageStat(Stat):
     name = models.ForeignKey('Player', on_delete=models.CASCADE, related_name='avg_stats')
