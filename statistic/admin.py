@@ -15,15 +15,15 @@ class AwardsInline(admin.TabularInline):
     extra = 3
 
 class PlayerAdmin(admin.ModelAdmin):
-    list_display = ('name', 'team', 'rus_first_name', 'rus_last_name')
-    list_editable = ('team', 'rus_first_name', 'rus_last_name' )
+    list_display = ('name', 'team', 'rus_first_name', 'rus_last_name', 'photo')
+    list_editable = ('team', 'rus_first_name', 'rus_last_name', 'photo' )
     actions = [change_team_bears]
     inlines = [AwardsInline,]
 admin.site.register(Player, PlayerAdmin)
 
 class TeamAdmin(admin.ModelAdmin):
-    list_display = ('name', 'wins', 'losses')
-    list_editable = ('wins', 'losses')
+    list_display = ('name', 'wins', 'losses', 'image')
+    list_editable = ('wins', 'losses', 'image')
 admin.site.register(Team, TeamAdmin)
 
 class AwardsAdmin(admin.ModelAdmin):

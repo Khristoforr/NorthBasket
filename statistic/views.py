@@ -8,7 +8,17 @@ from django.views.generic import ListView
 from statistic.models import Player, Game1, AverageStat
 
 def show_main_page(request):
-    return render(request, 'statistic/home.html')
+    best_scorer = AverageStat.objects.order_by('-pts')[0]
+    best_blockshoter = AverageStat.objects.order_by('-blk')[0]
+    best_rebounder = AverageStat.objects.order_by('-reb')[0]
+    best_assister = AverageStat.objects.order_by('-ast')[0]
+    best_stealer = AverageStat.objects.order_by('-stl')[0]
+    context = {'best_scorer': best_scorer,
+               'best_blockshoter':best_blockshoter,
+               'best_rebounder': best_rebounder,
+               'best_assister': best_assister,
+               'best_stealer': best_stealer}
+    return render(request, 'statistic/index.html', context=context)
 
 def show_smth(request):
     player = Player.objects.order_by('-stats1__pts')[:5]
