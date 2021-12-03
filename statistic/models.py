@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+from django.urls import reverse
+
 
 class Player(models.Model):
     name = models.TextField(primary_key=True, unique=True)
@@ -18,6 +20,9 @@ class Player(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('player', kwargs={'player_name': self.name})
 
 
 class Team(models.Model):

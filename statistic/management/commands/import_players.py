@@ -31,5 +31,6 @@ class Command(BaseCommand):
                                   weight=player['weight'],
                                   age=player['age'],
                                   position=player['position'],
+                                  height=player['height']
                                   )
 

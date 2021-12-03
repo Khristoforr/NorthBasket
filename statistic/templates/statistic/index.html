@@ -40,7 +40,7 @@
           </div>
           <div class="u-custom-menu u-nav-container">
             <ul class="u-custom-font u-font-lobster u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-black u-button-style u-nav-link u-text-active-palette-2-base u-text-hover-palette-4-light-1 u-text-palette-2-base" href="/home" style="padding: 14px 20px;">Главная</a>
-</li><li class="u-nav-item"><a class="u-black u-button-style u-nav-link u-text-active-palette-2-base u-text-hover-palette-4-light-1 u-text-palette-2-base" href="Статистика.html" style="padding: 14px 20px;">Статистика</a>
+</li><li class="u-nav-item"><a class="u-black u-button-style u-nav-link u-text-active-palette-2-base u-text-hover-palette-4-light-1 u-text-palette-2-base" href="/statistika" style="padding: 14px 20px;">Статистика</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
@@ -48,7 +48,7 @@
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/home" style="padding: 14px 20px;">Главная</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="yandex.ru" style="padding: 14px 20px;">Статистика</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/statistika" style="padding: 14px 20px;">Статистика</a>
 </li></ul>
               </div>
             </div>
@@ -112,17 +112,17 @@
           </table>
         </div>
         <p class="u-align-left u-custom-font u-font-oswald u-text u-text-default u-text-palette-2-base u-text-5" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
-          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="https://nicepage.com">Ассистент</a>
+          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1" href="{{best_assister.name.get_absolute_url}}">{{best_assister.name.rus_last_name}}</a>
         </p>
         <img class="u-image u-image-circle u-image-4" src="{{best_assister.name.team.image.urll}}" alt="" data-image-width="400" data-image-height="265">
         <p class="u-align-center u-custom-font u-font-oswald u-text u-text-white u-text-6" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">{{best_assister.ast}}</p>
         <p class="u-align-left u-custom-font u-font-oswald u-text u-text-default u-text-palette-2-base u-text-7" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
-          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" href="https://nicepage.com">{{best_scorer.name.rus_last_name}}</a>
+          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-2" href="{{best_scorer.name.get_absolute_url}}">{{best_scorer.name.rus_last_name}}</a>
         </p>
         <img class="u-image u-image-circle u-image-5" src="{{best_scorer.name.team.image.url}}" alt="" data-image-width="400" data-image-height="265">
         <p class="u-align-center u-custom-font u-font-oswald u-text u-text-white u-text-8" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">{{best_scorer.pts}}</p>
         <p class="u-align-left u-custom-font u-font-oswald u-text u-text-default u-text-palette-2-base u-text-9" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
-          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" href="https://nicepage.com">Подорщик</a>
+          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-3" href="{{best_rebounder.name.get_absolute_url}}">{{best_rebounder.name.rus_last_name}}</a>
         </p>
         <img class="u-image u-image-circle u-image-6" src="{{best_rebounder.name.team.image.url}}" alt="" data-image-width="400" data-image-height="265">
         <p class="u-align-center u-custom-font u-font-oswald u-text u-text-white u-text-10" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">{{best_rebounder.reb}}</p>
@@ -139,12 +139,12 @@
           </div>
         </div>
         <p class="u-align-left u-custom-font u-font-oswald u-text u-text-default u-text-palette-2-base u-text-17" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
-          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-4" href="https://nicepage.com">Перехватчик</a>
+          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-4" href="{{best_stealer.name.get_absolute_url}}">{{best_stealer.name.rus_last_name}}</a>
         </p>
         <img class="u-image u-image-circle u-image-9" src="{{best_stealer.name.team.image.url}}" alt="" data-image-width="400" data-image-height="265">
         <p class="u-align-center u-custom-font u-font-oswald u-text u-text-white u-text-18" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">{{best_stealer.stl}}</p>
         <p class="u-align-left u-custom-font u-font-oswald u-text u-text-default u-text-palette-2-base u-text-19" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
-          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5" href="https://nicepage.com">Блокшотер</a>
+          <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-5" href="{{best_blockshoter.name.get_absolute_url}}">{{best_blockshoter.name.rus_last_name}}</a>
         </p>
         <img class="u-image u-image-circle u-image-10" src="{{best_blockshoter.name.team.image.url}}" alt="" data-image-width="400" data-image-height="265">
         <p class="u-align-center u-custom-font u-font-oswald u-text u-text-white u-text-20" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">{{best_blockshoter.blk}}</p>

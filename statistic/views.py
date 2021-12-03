@@ -23,11 +23,16 @@ def show_main_page(request):
 def show_smth(request):
     player = Player.objects.order_by('-stats1__pts')[:5]
     context = {'players': player}
-    return render(request, 'statistic/player.html', context=context)
+    return render(request, 'statistic/Статистика-общая.html', context=context)
     # return HttpResponse("Страница")
 
 def show_player(request, player_name):
-    return HttpResponse(f"Страница игрока {player_name}")
+
+    player = Player.objects.filter(name=str.capitalize(player_name)).first()
+    stat = player.avg_stats.all()[0]
+    context = {'player': player,
+               'stat': stat}
+    return render(request, 'statistic/Страница-игрока.html', context=context)
 
 def show_team(request):
     return HttpResponse("Страница команды")

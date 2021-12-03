@@ -5,49 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e10f2680-dc09-468a-94ca-e991e7d7f042" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Barkin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Belov.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Efimenko.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Egorov.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Glinskiy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Gomov.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Guskov.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Kalin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Khozyashev.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Khristoforov.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Khurtin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Kondranin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Lozovoy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Martynov.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Mazurik.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Medvedev.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Pashkov.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Pavlenko.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Riznyk.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Serebrennikov.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/StarostaM.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/StarostaN.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Sychkin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Tsyplykhin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Veryaskin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Volk.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photos/2021/12/01/Yamalitdinov.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statistic/static/basket/images/Yudin.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/static/basket/css/nicepage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/static/basket/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/static/basket/css/Главная.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/static/basket/css/Команды.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/static/basket/css/Статистика.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/static/basket/js/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/static/basket/js/nicepage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/templates/statistic/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/templates/statistic/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/templates/statistic/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/templates/statistic/Главная.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/templates/statistic/Команды.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/templates/statistic/Статистика.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statistic/management/commands/import_players.py" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/management/commands/import_players.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/statistic/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/statistic/templates/statistic/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/templates/statistic/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/statistic/templates/statistic/Статистика-общая.html" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/templates/statistic/Статистика-общая.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/statistic/templates/statistic/Страница-игрока.html" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/templates/statistic/Страница-игрока.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/statistic/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/statistic/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/statistic/static/basket/images" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Загрузки/coolsite" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
