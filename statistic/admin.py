@@ -4,11 +4,13 @@ from .models import *
 
 def change_team_bears(modeladmin, request, queryset):
     queryset.update(team=1)
-    # НЕ ЗАБЫТЬ ДОБАВИТЬ ВСЕ КОМАНДЫ
-# def award_the_whole_team(modeladmin, request, queryset):
-#     queryset.filter(team=1).update(achievement_id=1)
-# # def award_team(modeladmin, request, queryset):
-# #     print(str(queryset.player_id))
+
+def change_team_loko(modeladmin, request, queryset):
+        queryset.update(team=2)
+
+
+def change_team_oilers(modeladmin, request, queryset):
+    queryset.update(team=3)
 
 class AwardsInline(admin.TabularInline):
     model = Awards
@@ -17,7 +19,7 @@ class AwardsInline(admin.TabularInline):
 class PlayerAdmin(admin.ModelAdmin):
     list_display = ('name', 'team', 'rus_first_name', 'rus_last_name', 'photo')
     list_editable = ('team', 'rus_first_name', 'rus_last_name', 'photo' )
-    actions = [change_team_bears]
+    actions = [change_team_bears, change_team_loko, change_team_oilers]
     inlines = [AwardsInline,]
 admin.site.register(Player, PlayerAdmin)
 
@@ -48,3 +50,7 @@ class AchievementsAdmin(admin.ModelAdmin):
     list_display = ('title',)
 admin.site.register(Achievements, AchievementsAdmin)
 
+class FileAdmin(admin.ModelAdmin):
+    list_display = ('file',)
+
+admin.site.register(Router)

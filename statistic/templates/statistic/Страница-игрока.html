@@ -40,7 +40,7 @@
           </div>
           <div class="u-custom-menu u-nav-container">
             <ul class="u-custom-font u-font-lobster u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-black u-button-style u-nav-link u-text-active-palette-2-base u-text-hover-palette-4-light-1 u-text-palette-2-base" href="/home" style="padding: 14px 20px;">Главная</a>
-</li><li class="u-nav-item"><a class="u-black u-button-style u-nav-link u-text-active-palette-2-base u-text-hover-palette-4-light-1 u-text-palette-2-base" href="Статистика.html" style="padding: 14px 20px;">Статистика</a>
+</li><li class="u-nav-item"><a class="u-black u-button-style u-nav-link u-text-active-palette-2-base u-text-hover-palette-4-light-1 u-text-palette-2-base" href="/statistika" style="padding: 14px 20px;">Статистика</a>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
@@ -48,7 +48,7 @@
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/home" style="padding: 14px 20px;">Главная</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Статистика.html" style="padding: 14px 20px;">Статистика</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/statistika" style="padding: 14px 20px;">Статистика</a>
 </li></ul>
               </div>
             </div>
@@ -64,7 +64,7 @@
         <p class="u-custom-font u-font-oswald u-text u-text-palette-4-light-1 u-text-3">{{player.position}}</p>
         <p class="u-custom-font u-font-oswald u-text u-text-palette-4-light-1 u-text-4">{{player.age}}лет</p>
         <p class="u-custom-font u-font-oswald u-text u-text-palette-4-light-1 u-text-5">{{player.weight}}</p>
-        <p class="u-custom-font u-font-oswald u-text u-text-palette-4-light-1 u-text-6">180</p>
+        <p class="u-custom-font u-font-oswald u-text u-text-palette-4-light-1 u-text-6">{{player.height}}</p>
         <p class="u-custom-font u-font-oswald u-text u-text-palette-4-light-1 u-text-7">кг</p>
         <p class="u-custom-font u-font-oswald u-text u-text-palette-4-light-1 u-text-8">см</p>
         <p class="u-align-left u-custom-font u-font-oswald u-text u-text-palette-3-base u-text-9">{{stat.pts}}</p>
@@ -92,16 +92,15 @@
               <tr style="height: 40px;">
                 <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">игра</th>
                 <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">Очки</th>
-                <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">ПДБ</th>
                 <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">АСТ</th>
                 <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">Прхв</th>
                 <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">Блк</th>
                 <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">Потери</th>
-                  <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">2ЗАБ</th>
-                <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">2Бр</th>
+                  <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">2FGM</th>
+                <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">2FGA</th>
                 <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">2%</th>
-                <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">3заб</th>
-                <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">3бр</th>
+                <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">3FGM</th>
+                <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">3FGA</th>
                 <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">3%</th>
                   <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">FG</th>
                 <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">FGM</th>
@@ -112,7 +111,6 @@
                 <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">ПДБ</th>
                 <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">ПДБа</th>
                 <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">ПДБз</th>
-                  <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">Фолы</th>
                 <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">ЭФФ</th>
                   <th class="u-border-5 u-border-black u-border-no-left u-border-no-right u-table-cell">+\-</th>
 
@@ -121,21 +119,134 @@
             <tbody class="u-align-center u-table-body u-table-body-1">
               <tr style="height: 46px;">
                 <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">1</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.pts }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.ast }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.stl }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.blk }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.tov }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.fgm2 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.fga2 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.fg2 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.fgm3 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.fga3 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.fg3 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.fg }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.fgm }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.fga }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.fta }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.ftm }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.ft }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.reb }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.oreb }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.dreb }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.eff }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game1_stat.plus_minus }}</td>
               </tr>
               <tr style="height: 46px;">
                 <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">2</td>
+                                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.pts }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.ast }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.stl }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.blk }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.tov }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.fgm2 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.fga2 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.fg2 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.fgm3 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.fga3 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.fg3 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.fg }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.fgm }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.fga }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.fta }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.ftm }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.ft }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.reb }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.oreb }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.dreb }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.eff }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game2_stat.plus_minus }}</td>
               </tr>
               <tr style="height: 46px;">
                 <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">3</td>
+                                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.pts }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.ast }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.stl }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.blk }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.tov }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.fgm2 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.fga2 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.fg2 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.fgm3 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.fga3 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.fg3 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.fg }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.fgm }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.fga }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.fta }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.ftm }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.ft }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.reb }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.oreb }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.dreb }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.eff }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game3_stat.plus_minus }}</td>
               </tr>
                           <tr style="height: 46px;">
                 <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">4</td>
+                            <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.pts }}</td>
+                            <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.ast }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.stl }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.blk }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.tov }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.fgm2 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.fga2 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.fg2 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.fgm3 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.fga3 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.fg3 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.fg }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.fgm }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.fga }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.fta }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.ftm }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.ft }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.reb }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.oreb }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.dreb }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.eff }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ game4_stat.plus_minus }}</td>
               </tr>
                           <tr style="height: 46px;">
                 <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">Avg</td>
+                                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.pts }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.ast }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.stl }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.blk }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.tov }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.fgm2 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.fga2 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.fg2 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.fgm3 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.fga3 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.fg3 }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.fg }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.fgm }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.fga }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.fta }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.ftm }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.ft }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.reb }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.oreb }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.dreb }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.eff }}</td>
+                <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{ avg_stat.plus_minus }}</td>
               </tr>
             <tr style="height: 46px;">
                 <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">Место В лиге</td>
+              {% for stat in rating %}
+              <td class="u-border-4 u-border-palette-4-light-1 u-table-cell">{{stat}}</td>
+              {% endfor %}
               </tr>
             </tbody>
           </table>

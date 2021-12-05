@@ -8837,6 +8837,7 @@ ul.u-text li:last-child {
 [class*="u-border-"].u-border-no-left {
   border-left-width: 0;
   border-left-style: none;
+  text-align: center;
 }
 .u-border-color-none {
   background-color: transparent;

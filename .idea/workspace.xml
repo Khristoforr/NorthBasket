@@ -6,12 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e10f2680-dc09-468a-94ca-e991e7d7f042" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/management/commands/import_players.py" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/management/commands/import_players.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statistic/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/statistic/management/commands/calculate_average_stats.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/statistic/management/commands/first_game_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/management/commands/first_game_stats.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/statistic/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/templates/statistic/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/templates/statistic/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/statistic/static/basket/css/nicepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/static/basket/css/nicepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/statistic/static/basket/css/Страница-игрока.css" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/static/basket/css/Страница-игрока.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/statistic/templates/statistic/Статистика-общая.html" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/templates/statistic/Статистика-общая.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/statistic/templates/statistic/Страница-игрока.html" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/templates/statistic/Страница-игрока.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statistic/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/statistic/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/statistic/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -1,11 +1,12 @@
 from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render, get_object_or_404
 
-
+list_stat = ['pts', 'ast', 'stl', 'blk', 'tov', 'fgm2', 'fga2', 'fg2', 'fgm3', 'fga3', 'fg3',
+             'fg', 'fgm', 'fga', 'fta', 'ftm', 'ft', 'reb', 'oreb', 'dreb', 'eff', 'plus_minus']
 # Create your views here.
 from django.views.generic import ListView
 
-from statistic.models import Player, Game1, AverageStat
+from statistic.models import Player, Game1, AverageStat, Game2,Game3, Game4
 
 def show_main_page(request):
     best_scorer = AverageStat.objects.order_by('-pts')[0]
@@ -26,12 +27,35 @@ def show_smth(request):
     return render(request, 'statistic/Статистика-общая.html', context=context)
     # return HttpResponse("Страница")
 
+def rating(player, stat):
+    if stat == 'tov':
+        for index, item in enumerate(AverageStat.objects.order_by('tov')):
+            if item.name.name == str.capitalize(player):
+                return index + 1
+    else:
+        for index,item in enumerate(AverageStat.objects.order_by(f'-{stat}')):
+            if item.name.name == str.capitalize(player):
+                return index + 1
+
+
 def show_player(request, player_name):
 
     player = Player.objects.filter(name=str.capitalize(player_name)).first()
     stat = player.avg_stats.all()[0]
+    game1_stat = Game1.objects.filter(name=str.capitalize(player_name)).first()
+    game2_stat = Game2.objects.filter(name=str.capitalize(player_name)).first()
+    game3_stat = Game3.objects.filter(name=str.capitalize(player_name)).first()
+    game4_stat = Game4.objects.filter(name=str.capitalize(player_name)).first()
+    avg_stat = AverageStat.objects.filter(name=str.capitalize(player_name)).first()
+    rating_list = [rating('Gomov', i) for i in list_stat]
     context = {'player': player,
-               'stat': stat}
+               'stat': stat,
+               'game1_stat': game1_stat,
+               'game2_stat': game2_stat,
+               'game3_stat': game3_stat,
+               'game4_stat': game4_stat,
+               'avg_stat': avg_stat,
+               'rating': rating_list}
     return render(request, 'statistic/Страница-игрока.html', context=context)
 
 def show_team(request):

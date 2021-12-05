@@ -1,3 +1,5 @@
+import os
+
 import xlrd
 from django.core.management.base import BaseCommand
 from statistic.models import Player, AverageStat, Game1, Game2, Game3, Game4
@@ -16,7 +18,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         AverageStat.objects.all().delete()
         game_list = [Game1, Game2, Game3, Game4]
-        workbook = xlrd.open_workbook('import_stats.xlsx', on_demand=True).sheet_by_index(0)
+        workbook = xlrd.open_workbook('media/files_2_upload/import_stats.xlsx', on_demand=True).sheet_by_index(0)
         first_row = []
         for col in range(workbook.ncols):
             first_row.append(workbook.cell_value(0, col))
@@ -88,3 +90,4 @@ class Command(BaseCommand):
             some_player.save()
 
         print("Экспорт данных выполнен успешно")
+        os.remove('media/files_2_upload/import_stats.xlsx')

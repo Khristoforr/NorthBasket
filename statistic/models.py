@@ -96,3 +96,6 @@ class Awards(models.Model):
 
     def __str__(self):
         return f'{self.player} имеет награду {self.achievement}'
+
+class Router(models.Model):
+    file = models.FileField(upload_to='files_2_upload')
